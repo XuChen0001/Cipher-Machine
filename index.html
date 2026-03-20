@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珠玑妙算 - 颜色解谜游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>珠玑妙算</h1>
+        <div class="game-info">
+            <div class="difficulty-selector">
+                <h3>选择难度</h3>
+                <div class="difficulty-buttons">
+                    <button data-difficulty="1">简单 (1行提示)</button>
+                    <button data-difficulty="2">中等 (2行提示)</button>
+                    <button data-difficulty="3">困难 (3行提示)</button>
+                    <button data-difficulty="4">专家 (4行提示)</button>
+                </div>
+            </div>
+            <div class="level-info">
+                <h3>关卡: <span id="level-number">1</span></h3>
+                <h3>最高分: <span id="highest-level">1</span></h3>
+            </div>
+        </div>
+        
+        <div class="game-board">
+            <div id="board" class="board">
+                <!-- 游戏行将通过JavaScript动态生成 -->
+            </div>
+        </div>
+        
+        <div class="color-pool">
+            <h3>颜色池</h3>
+            <div class="colors">
+                <div class="color-option" data-color="red"></div>
+                <div class="color-option" data-color="blue"></div>
+                <div class="color-option" data-color="green"></div>
+                <div class="color-option" data-color="yellow"></div>
+                <div class="color-option" data-color="purple"></div>
+                <div class="color-option" data-color="orange"></div>
+                <div class="color-option" data-color="cyan"></div>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="submit-btn" disabled>提交</button>
+            <button id="lock-btn" disabled>固定</button>
+            <button id="reset-btn">重置</button>
+        </div>
+        
+        <div id="game-message" class="game-message"></div>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <p id="modal-message"></p>
+            <div class="modal-buttons">
+                <button id="modal-close">关闭</button>
+                <button id="modal-next">下一关</button>
+                <button id="modal-retry">重试</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
